@@ -3,13 +3,13 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Your anti Procras tool!">
+    <meta name="description" content="Bluetooth tool pi!">
     <meta name="author" content="Ethan Ray">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     
     
-    <title>Anti Procras by Ethan Ray</title>
+    <title>Bluetooth scanner</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bs/css/bootstrap.min.css') }}" />
     <script src="{{ url_for('static', filename='bs/js/bootstrap.min.js') }}"></script>
     
@@ -21,7 +21,7 @@
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="/">  Anti Procras</a>
+      <a class="navbar-brand" href="/">  Bluetooth scanner</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,30 +35,26 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-md-4">
-            <h2>Work Hours</h2>
-            <p>Visit this page to edit, change or remove working hours and days these rules apply.</p>
-            <p><a class="btn btn-secondary" href="/workhours/" role="button">View Work Hours»</a></p>
+            <h2>Edit settings</h2>
+            <p><a class="btn btn-secondary" href="/edit/" role="button">Edit settings»</a></p>
           </div>
           <div class="col-md-4">
-            <h2>Blocked Websites</h2>
-            <p>In this page you can add or remove pages that are blocked during your working hours. </p>
-            <p><a class="btn btn-secondary" href="/websites/" role="button">View Webpages»</a></p>
+            <h2>Edit settings</h2>
+            <p><a class="btn btn-secondary" href="/edit/" role="button">Edit settings»</a></p>
           </div>
           <div class="col-md-4">
-            <h2>Control Panel</h2>
-            <p>Here are settings that you can play with. A masterswitch and info.</p>
-            <p><a class="btn btn-secondary" href="/controlpanel/" role="button">View details »</a></p>
+            <h2>Edit settings</h2>
+            <p><a class="btn btn-secondary" href="/edit/" role="button">Edit settings»</a></p>
           </div>
         </div>
         <br>
           <p>Made by Ethan Ray 2021</p>
           <br>
         <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Blocked Websites</a>
-          {% for webpage in webpages %}
-          <a href="/view/{{webpage}}" class="list-group-item list-group-item-action">{{webpage}}</a>
+          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Bluetooth devices</a>
+          {% for device in devices %}
+          <a href="/view/{{webpage}}" class="list-group-item list-group-item-action">{{device}}</a>
           {% endfor %}  
-          <a href="/websites/" class="list-group-item list-group-item-action">Edit list</a>
         </div>
         
         <hr>
